@@ -50,7 +50,7 @@ void EnviarSMS (String texto) {
   delay(1000);
 
   //Enviar comando para un nuevos SMS al numero establecido
-  Serial1.println("AT+CMGS=\"+59899707574\"");
+  Serial1.println("AT+CMGS=\"numero_tel_movil\"");
   delay(1000);
 
   //Enviar contenido del SMS

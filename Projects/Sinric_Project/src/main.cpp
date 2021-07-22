@@ -36,12 +36,12 @@
 #include "SinricPro.h"
 #include "SinricProSwitch.h"
 
-#define WIFI_SSID "SH"
-#define WIFI_PASS "noteaprendaslacontrasenia"
-#define APP_KEY "11e64a80-4096-4b69-af72-a051d3020173"                                         // Should look like "de0bxxxx-1x3x-4x3x-ax2x-5dabxxxxxxxx"
-#define APP_SECRET "006a4009-a80f-4ffe-a513-5063be99f934-af11fbc3-de4d-4b4e-8d9a-7bcdd6b02779" // Should look like "5f36xxxx-x3x7-4x3x-xexe-e86724a9xxxx-4c4axxxx-3x3x-x5xe-x9x3-333d65xxxxxx"
-#define luzL "60a9463f2a231603cf2618a1"                                                        // Should look like "5dc1564130xxxxxxxxxxxxxx"
-#define luzR "60a9469d8cf8a303b9394086"
+#define WIFI_SSID ""
+#define WIFI_PASS ""
+#define APP_KEY ""                                         // Should look like "de0bxxxx-1x3x-4x3x-ax2x-5dabxxxxxxxx"
+#define APP_SECRET "" // Should look like "5f36xxxx-x3x7-4x3x-xexe-e86724a9xxxx-4c4axxxx-3x3x-x5xe-x9x3-333d65xxxxxx"
+#define luzL ""                                                        // Should look like "5dc1564130xxxxxxxxxxxxxx"
+#define luzR ""
 #define BAUD_RATE 115200 // Change baudrate to your need
 
 #define BUTTON_PIN 0 // GPIO for BUTTON (inverted: LOW = pressed, HIGH = released)
@@ -66,14 +66,14 @@ unsigned long lastBtnPress = 0;
  */
 bool onPowerState(const String &deviceId, bool &state)
 {
-  if (deviceId == "60a9463f2a231603cf2618a1")
+  if (deviceId == luzL)
   {
     Serial.printf("Device %s turned %s (via SinricPro) \r\n", deviceId.c_str(), state ? "on" : "off");
     myPowerState = state;
     digitalWrite(LUZL, myPowerState ? LOW : HIGH);
     return true; // request handled properly
   }
-  else if (deviceId == "60a9469d8cf8a303b9394086")
+  else if (deviceId == luzR)
   {
     Serial.printf("Device %s turned %s (via SinricPro) \r\n", deviceId.c_str(), state ? "on" : "off");
     myPowerState = state;

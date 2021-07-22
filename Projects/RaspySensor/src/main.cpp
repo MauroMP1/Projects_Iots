@@ -13,8 +13,8 @@
 DHT dht(DHTPIN, DHTTYPE);
 aREST rest = aREST();
 
-const char *ssid = "Guifi_2.4GHz";
-const char *password = "noteaprendaslacontrasenia";
+const char *ssid = "";
+const char *password = "";
 const char *nameServer = "sensor_H1";
 const char *idServer = "1";
 

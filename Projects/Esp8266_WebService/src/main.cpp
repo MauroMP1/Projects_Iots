@@ -2,8 +2,8 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 
-const char *ssid = "Guifi";
-const char *password = "noteaprendaslacontrasenia";
+const char *ssid = "";
+const char *password = "";
 
 // Establecer IP, Puerta de Enlace y Máscara
 IPAddress ip(183, 153, 0, 45);
