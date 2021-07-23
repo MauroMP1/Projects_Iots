@@ -4,12 +4,12 @@
 #include "DHTesp.h"
 #include <stdlib.h>
  
-const char* ssid = "RedG";
-const char* password =  "redmqtthome";
-const char* mqttServer = "183.153.0.105";
+const char* ssid = "";
+const char* password =  "";
+const char* mqttServer = "";
 const int mqttPort = 1883;
-const char* mqttUser = "Mauro";
-const char* mqttPassword = "domoticaencasa";
+const char* mqttUser = "";
+const char* mqttPassword = "";
  
 WiFiClient espClient;
 PubSubClient client(espClient);
