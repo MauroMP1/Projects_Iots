@@ -71,6 +71,7 @@ DATA = [
     },
 ]
 
+
 def run():
 
     # Comprehensions solutions
@@ -80,11 +81,14 @@ def run():
     # old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
 
     # Challenge completed
-    all_python_devs = list(filter(lambda worker: worker["language"] == "python", DATA))
+    all_python_devs = list(
+        filter(lambda trabajador: trabajador["language"] == "python", DATA))
     all_python_devs = list(map(lambda worker: worker["name"], all_python_devs))
-    
-    all_Platzi_workers = list(filter(lambda worker: worker["organization"] == "Platzi", DATA))
-    all_Platzi_workers = list(map(lambda worker: worker["name"], all_Platzi_workers))
+
+    all_Platzi_workers = list(
+        filter(lambda worker: worker["organization"] == "Platzi", DATA))
+    all_Platzi_workers = list(
+        map(lambda worker: worker["name"], all_Platzi_workers))
 
     adults = list(filter(lambda worker: worker["age"] > 18, DATA))
     adults = list(map(lambda worker: worker["name"], adults))
